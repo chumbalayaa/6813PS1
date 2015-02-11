@@ -1,0 +1,133 @@
+body, html {
+    background-color: #eee;
+    margin:0;
+  	padding:0;
+  	height: 100%;
+	width: 100%;
+}
+
+/* Your CSS here */
+
+div#mainDiv {
+	height: 100%;
+	width: 100%;
+	margin: 100px;
+}
+
+div#titleDiv {
+	width: 100%;
+	height: 10%;
+}
+
+div#columnDiv1 {
+	float: left;
+	width: 30%;
+	height: 90%;
+	margin-right: 5%;
+}
+
+div#columnDiv2 {
+	float: left;
+	width: 30%;
+	height: 90%;
+	margin-right: 5%;
+}
+
+div#columnDiv3 {
+	float: left;
+	width: 30%;
+	height: 90%;
+}
+
+div.columnTitle {
+	margin-bottom: 50px;
+}
+
+div#spanishStatic1 {
+	height: 5%;
+	color: blue;
+	font-size: 75px;
+	margin-top: 50px;
+}
+
+div#spanishStatic2 {
+	height: 5%;
+	color: red;
+	font-size: 75px;
+	margin-top: 50px;
+}
+
+div#englishStatic1 {
+	height: 5%;
+	color: blue;
+	font-size: 75px;
+	margin-top: 50px;
+}
+
+div#englishStatic2 {
+	height: 5%;
+	color: red;
+	font-size: 75px;
+	margin-top: 50px;
+	text-decoration: line-through;
+}
+
+div#answerStatic1 {
+	height: 5%;
+	font-size: 75px;
+	margin-top: 50px;
+}
+
+div#answerStatic2 {
+	height: 5%;
+	color: red;
+	font-size: 75px;
+	margin-top: 50px;
+}
+
+div#spanishCurrent {
+	height: 5%;
+	font-size: 75px;
+	margin-top: 50px;
+	padding-bottom: 75px;
+}
+
+div#englishCurrent {
+	height: 5%;
+	font-size: 75px;
+	margin-top: 50px;
+	padding-bottom: 75px;
+}
+
+div#answerCurrent {
+	height: 5%;
+	font-size: 75px;
+	margin-top: 50px;
+	padding-bottom: 75px;
+}
+
+h1#titleText {
+	color: green;
+	font-size: 150px;
+	font-weight: bold;
+}
+
+h1.columnTitleText {
+	color: green;
+	font-size: 110px;
+}
+
+button#submitButton {
+	width: 40%;
+	height: 100%;
+	font-size: 50px;
+}
+
+input#englishInput {
+	width: 40%;
+	height: 100%;
+	font-size: 50px;
+}
+
+
+

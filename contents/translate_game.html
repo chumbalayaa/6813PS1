@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+   COLLABORATORS:
+   
+  -->
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ready, Set, Translate !</title>
+    <link type="text/css" href="jquery/css/ui-lightness/jquery-ui-1.10.0.custom.css" rel="stylesheet" />
+    <link type="text/css" href="translate_game.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script>
+    <script type="text/javascript" src="dicts.json"></script>
+    <script type="text/javascript" src="translate_game.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Your HTML here -->
+    <div id="mainDiv">
+      <div id="titleDiv">
+        <h1 id="titleText">Translate from Spanish to English</h1>
+      </div>
+      <div id="columnDiv1">
+        <div class="columnTitle">
+          <h1 class="columnTitleText">Spanish</h1>
+        </div>
+        <div id="spanishCurrent">
+          espejo
+        </div>
+        <div id="spanishStatic1">
+          calabaza
+        </div>
+        <div id="spanishStatic2">
+          postmodernidad
+        </div>
+      </div>
+      <div id="columnDiv2">
+        <div class="columnTitle">
+          <h1 class="columnTitleText">English</h1>
+        </div>
+        <div id="englishCurrent">
+          <input type="text" name="englishText" id="englishInput" autofocus>
+        </div>
+        <div id="englishStatic1">
+          pumpkin
+        </div>
+        <div id="englishStatic2">
+          phone
+        </div>
+      </div>
+      <div id="columnDiv3">
+        <div class="columnTitle">
+          <h1 class="columnTitleText">Answer</h1>
+        </div>
+        <div id="answerCurrent">
+          <button type="button" id="submitButton">See Answer!</button>
+        </div>
+        <div id="answerStatic1">
+          &#10004;
+        </div>
+        <div id="answerStatic2">
+          postmodernism
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
