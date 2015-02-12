@@ -17,6 +17,7 @@ div#mainDiv {
 div#titleDiv {
 	width: 100%;
 	height: 10%;
+	margin-bottom: 25px;
 }
 
 div#columnDiv1 {
@@ -46,81 +47,81 @@ div.columnTitle {
 div#spanishStatic1 {
 	height: 5%;
 	color: blue;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 }
 
 div#spanishStatic2 {
 	height: 5%;
 	color: red;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 }
 
 div#englishStatic1 {
 	height: 5%;
 	color: blue;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 }
 
 div#englishStatic2 {
 	height: 5%;
 	color: red;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 	text-decoration: line-through;
 }
 
 div#answerStatic1 {
 	height: 5%;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 }
 
 div#answerStatic2 {
 	height: 5%;
 	color: red;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 }
 
 div#spanishCurrent {
 	height: 5%;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 	padding-bottom: 75px;
 }
 
 div#englishCurrent {
 	height: 5%;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 	padding-bottom: 75px;
 }
 
 div#answerCurrent {
 	height: 5%;
-	font-size: 75px;
+	font-size: 25px;
 	margin-top: 50px;
 	padding-bottom: 75px;
 }
 
 h1#titleText {
 	color: green;
-	font-size: 150px;
+	font-size: 50px;
 	font-weight: bold;
 }
 
 h1.columnTitleText {
-	color: green;
-	font-size: 110px;
+	color: black;
+	font-size: 45px;
 }
 
 button#submitButton {
 	width: 40%;
 	height: 100%;
-	font-size: 50px;
+	font-size: 17px;
 }
 
 input#englishInput {
