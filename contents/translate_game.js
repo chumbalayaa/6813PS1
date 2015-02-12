@@ -19,19 +19,38 @@ $(function() {
 		var second = $("#englishInput").val(),
 		    first  = $("#spanishCurrent").text();
 		if (checkMatch(first, second)) {
-			setupGame(true);
+			setupGame(true, first, second);
 		} else {
-			setupGame(false);
+			setupGame(false, first, second);
 		}
 	};
 
-	var setupGame = function(correct) {	
+	var populateBottom = function(correct, first, second) {
+		var answerCount = $('.englishPopulate').length;
+		if (answerCount != $('.spanishPopulate').length){
+			location.reload();
+		}
+		if (answerCount != $('.answerPopulate').length){
+			location.reload();
+		}
+		var firstSpanish = $(".spanishPopulate").first();
+		var firstEnglish = $(".englishPopulate").first();
+		var firstAnswer = $(".answerPopulate").first();
+		if (answerCount <= 8) {
+			//Simply prepend a combination
+			$("<p>Hi</p>").insertBefore(firstSpanish);
+		} else {
+
+		}
+	};
+
+	var setupGame = function(correct, first, second) {	
 		if (correct) {
 			//populate with blue word, blue word, and check
-
+			populateBottom(true, first, bottom);
 		} else {
 			//populate with red word, crossed red word, and red word 
-
+			populateBottom(false, first, second);
 		}
 		//Clear input
 		$("#englishInput").val("");
@@ -40,7 +59,7 @@ $(function() {
 			//Refocus input
 			$("#englishInput").focus();
 		});
-	}
+	};
 
 	var runGame = function(cb) {
 		//Find random value

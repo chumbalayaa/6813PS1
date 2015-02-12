@@ -44,28 +44,28 @@ div.columnTitle {
 	margin-bottom: 50px;
 }
 
-div#spanishStatic1 {
+div#spanishStaticCorrect {
 	height: 5%;
 	color: blue;
 	font-size: 25px;
 	margin-top: 50px;
 }
 
-div#spanishStatic2 {
+div#spanishStaticWrong {
 	height: 5%;
 	color: red;
 	font-size: 25px;
 	margin-top: 50px;
 }
 
-div#englishStatic1 {
+div#englishStaticCorrect {
 	height: 5%;
 	color: blue;
 	font-size: 25px;
 	margin-top: 50px;
 }
 
-div#englishStatic2 {
+div#englishStaticWrong {
 	height: 5%;
 	color: red;
 	font-size: 25px;
@@ -73,13 +73,13 @@ div#englishStatic2 {
 	text-decoration: line-through;
 }
 
-div#answerStatic1 {
+div#answerStaticCorrect {
 	height: 5%;
 	font-size: 25px;
 	margin-top: 50px;
 }
 
-div#answerStatic2 {
+div#answerStaticWrong {
 	height: 5%;
 	color: red;
 	font-size: 25px;
