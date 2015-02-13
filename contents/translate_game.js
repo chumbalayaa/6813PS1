@@ -22,17 +22,6 @@ $(function() {
 		}
 	};
 
-	var submitAction = function() {
-		//Check match
-		var second = $("#englishInput").val(),
-		    first  = $("#spanishCurrent").text();
-		if (checkMatch(first, second)) {
-			setupGame(true, first, second);
-		} else {
-			setupGame(false, first, second);
-		}
-	};
-
 	var populateBottom = function(correct, first, second) {
 		var answerCount = $('.englishPopulate').length;
 		if (answerCount != $('.spanishPopulate').length){
@@ -63,6 +52,32 @@ $(function() {
 		}
 	};
 
+	var autocompleteSubmitAction = function(input) {
+		var second = input,
+		   	first  = $("#spanishCurrent").text();
+		if (second == '' || second == null || second == undefined) {
+			return;
+		}
+		if (checkMatch(first, second)) {
+			setupGame(true, first, second);
+		} else {
+			setupGame(false, first, second);
+		}
+	};
+
+	var submitAction = function() {
+		var second = $("#englishInput").val(),
+		   	first  = $("#spanishCurrent").text();
+		if (second == '' || second == null || second == undefined) {
+			return;
+		}
+		if (checkMatch(first, second)) {
+			setupGame(true, first, second);
+		} else {
+			setupGame(false, first, second);
+		}
+	};
+
 	var setupGame = function(correct, first, second) {	
 		if (correct) {
 			//populate with blue word, blue word, and check
@@ -71,10 +86,9 @@ $(function() {
 			//populate with red word, crossed red word, and red word 
 			populateBottom(false, first, second);
 		}
-		//Clear input
-		$("#englishInput").val("");
 		//Get new random
 		runGame(function() {
+			$("#englishInput").val("");
 			//Refocus input
 			$("#englishInput").focus();
 		});
@@ -96,7 +110,33 @@ $(function() {
 		cb();
 	};
 
+	//Global variables
+	var englishWords = [];
+	for (var k in current_dict) {
+		englishWords.push(k);
+	}
+	$('#englishInput').autocomplete({
+		minLength : 2,
+		source : englishWords,
+		select : function(event, ui) {
+			autocompleteSubmitAction(ui.item.label);
+			$(this).val('');
+			return false;
+		}
+	});
+
 	//Global actions
+	//Submit click
 	$("#submitButton").click(submitAction);
+	//Enter submit
+	$('#englishInput').keyup(function (e) {
+        	if(e.which === 13) {
+        		var tmp = $('#englishInput').data().uiAutocomplete.term;
+        		console.log(tmp);
+        		$('#englishInput').data().uiAutocomplete.term = null;
+            	$(".ui-menu-item").hide();
+            	autocompleteSubmitAction(tmp);
+        	}            
+    });
 	runGame(function() {});
 });
