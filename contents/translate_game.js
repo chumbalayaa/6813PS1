@@ -26,6 +26,7 @@ $(function () {
             incrementScore();
             return true;
         } else {
+            resetTime(true);
             return false;
         }
     };
