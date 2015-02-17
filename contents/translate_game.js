@@ -11,7 +11,6 @@ $(function () {
         count = 20,
         interval;
 
-    // Your code here
     var reverseLookup = function (value) {
         for (var k in current_dict) {
             if (current_dict[k] == value) {
@@ -31,6 +30,7 @@ $(function () {
         }
     };
 
+    //Add the new divs depending on game outcome
     var populateBottom = function (correct, first, second) {
         var answerCount = $('.englishPopulate').length;
         if (answerCount != $('.spanishPopulate').length) {
@@ -133,20 +133,7 @@ $(function () {
         }
     });
 
-    //-------------Global actions
-    //Submit click
-    $("#submitButton").click(submitAction);
-    //Enter submit
-    $('#englishInput').keyup(function (e) {
-        if (e.which === 13) {
-            var tmp = $('#englishInput').data().uiAutocomplete.term;
-            $('#englishInput').data().uiAutocomplete.term = null;
-            $(".ui-menu-item").hide();
-            autocompleteSubmitAction(tmp);
-        }
-    });
-
-    //-------------COUNTDOWN------------------
+    //-------------COUNTDOWN AND SCORING CODE------------------
     //Score
     var displayScore = function () {
         $('#scoreText').text('Score: ' + score);
@@ -185,6 +172,20 @@ $(function () {
     };
     //--------------/COUNTDOWN--------------
 
+    //-------------Global actions
+    //Submit click
+    $("#submitButton").click(submitAction);
+    //Enter submit
+    $('#englishInput').keyup(function (e) {
+        if (e.which === 13) {
+            var tmp = $('#englishInput').data().uiAutocomplete.term;
+            $('#englishInput').data().uiAutocomplete.term = null;
+            $(".ui-menu-item").hide();
+            autocompleteSubmitAction(tmp);
+        }
+    });
+
+    //Run initial game
     runGame(function() {
     	countdownMain();
     });
