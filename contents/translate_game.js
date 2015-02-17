@@ -145,7 +145,6 @@ $(function () {
             autocompleteSubmitAction(tmp);
         }
     });
-    //TODO: Highlight matching part of the dropdown
 
     //-------------COUNTDOWN------------------
     //Score
